@@ -3,10 +3,14 @@
 @tailwind utilities;
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
-*{
-    font-family: 'Roboto Mono', monospace;
+* {
+   font-family: 'Roboto Mono', monospace;
 }
 
-button:focus{
-    border: none;
+button:focus {
+   border: none;
+}
+
+a:hover {
+   cursor: pointer;
 }
