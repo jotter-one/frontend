@@ -2,6 +2,7 @@
 import { FcGoogle } from 'react-icons/fc'
 import { Auth } from 'aws-amplify'
 import { CognitoHostedUIIdentityProvider } from '@aws-amplify/auth/lib/types'
+import { ReactNode } from 'react'
 
 export default function Login() {
    const handleGoogleLogin = () => {
@@ -32,4 +33,8 @@ export default function Login() {
          </div>
       </>
    )
+}
+
+Login.getLayout = function PageLayout(page: ReactNode) {
+   return <> {page}</>
 }
