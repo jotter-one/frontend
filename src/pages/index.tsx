@@ -1,3 +1,4 @@
+import EmojiPicker from '@/components/Emoji'
 import Diary from '../components/Diary'
 export default function Home() {
    return (
@@ -7,7 +8,11 @@ export default function Home() {
                {' '}
                <Diary />
             </div>
-            <div className='col-span-1 '>Column 2</div>
+            <div className='col-span-1 '>
+               <div className='bg-white shadow rounded-md p-4'>
+                  <EmojiPicker />
+               </div>
+            </div>
          </div>
       </>
    )
