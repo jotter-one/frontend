@@ -24,7 +24,9 @@ export default function App({ Component, pageProps }: AppPropsWithLayout) {
    return (
       <>
          <Navbar />
-         <Component {...pageProps} />
+         <div className='mx-auto w-full pt-6 px-2 sm:px-6 lg:px-8 mt-16'>
+            <Component {...pageProps} />
+         </div>
       </>
    )
 }

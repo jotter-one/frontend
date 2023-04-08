@@ -2,12 +2,13 @@
 import { Fragment } from 'react'
 import { Disclosure, Menu, Transition } from '@headlessui/react'
 import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
+import { useRouter } from 'next/router'
 import { Auth } from 'aws-amplify'
 import Link from 'next/link'
 const navigation = [
-   { name: 'Home', href: '/', current: true },
-   { name: 'Wealth Manager', href: '/wealth', current: false },
-   { name: 'Marketplace', href: 'marketplace', current: false },
+   { name: 'Home', href: '/' },
+   { name: 'Wealth Manager', href: '/wealth' },
+   { name: 'Marketplace', href: '/marketplace' },
 ]
 
 function classNames(...classes: string[]) {
@@ -15,11 +16,12 @@ function classNames(...classes: string[]) {
 }
 
 export default function Navbar() {
+   const router = useRouter()
    const handleSignOut = () => {
       Auth.signOut()
    }
    return (
-      <Disclosure as='nav' className='bg-gray-800 w-full'>
+      <Disclosure as='nav' className='bg-gray-800 w-full fixed z-10 top-0'>
          {({ open }) => (
             <>
                <div className='mx-auto w-full px-2 sm:px-6 lg:px-8'>
@@ -54,12 +56,12 @@ export default function Navbar() {
                                     key={item.name}
                                     href={item.href}
                                     className={classNames(
-                                       item.current
+                                       router.route === item.href
                                           ? 'bg-gray-900 text-white'
                                           : 'text-gray-300 hover:bg-gray-700 hover:text-white',
                                        'rounded-md px-3 py-2 text-sm font-medium'
                                     )}
-                                    aria-current={item.current ? 'page' : undefined}
+                                    aria-current={router.route === item.href ? 'page' : undefined}
                                  >
                                     {item.name}
                                  </Link>
@@ -145,20 +147,20 @@ export default function Navbar() {
                <Disclosure.Panel className='sm:hidden'>
                   <div className='space-y-1 px-2 pb-3 pt-2'>
                      {navigation.map((item) => (
-                        <Disclosure.Button
+                        <Link
                            key={item.name}
                            as='a'
                            href={item.href}
                            className={classNames(
-                              item.current
+                              router.route === item.href
                                  ? 'bg-gray-900 text-white'
                                  : 'text-gray-300 hover:bg-gray-700 hover:text-white',
                               'block rounded-md px-3 py-2 text-base font-medium'
                            )}
-                           aria-current={item.current ? 'page' : undefined}
+                           aria-current={router.route === item.href ? 'page' : undefined}
                         >
                            {item.name}
-                        </Disclosure.Button>
+                        </Link>
                      ))}
                   </div>
                </Disclosure.Panel>

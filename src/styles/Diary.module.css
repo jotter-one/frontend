@@ -1,0 +1,10 @@
+.text__area {
+   background-attachment: local;
+   background-image: linear-gradient(to right, white 10px, transparent 10px),
+      linear-gradient(to left, white 10px, transparent 10px),
+      repeating-linear-gradient(white, white 30px, #000000 30px, #ccc 31px, white 31px);
+   line-height: 31px;
+   padding: 5px 0;
+   margin-top: 0;
+   padding-left: 10px;
+}
