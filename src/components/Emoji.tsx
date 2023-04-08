@@ -1,15 +1,17 @@
 import React, { useState } from 'react'
 import emojiData from 'emojilib'
 import styles from '../styles/Emoji.module.css'
+
 const EmojiPicker = () => {
    // State to keep track of the selected emoji
-   const [selectedEmoji, setSelectedEmoji] = useState(null)
+   const [selectedEmoji, setSelectedEmoji] = useState<string | null>(null)
 
    // Function to handle when an emoji is clicked
-   const handleEmojiClick = (emoji) => {
+   const handleEmojiClick = (emoji: string) => {
       console.log(emoji)
       setSelectedEmoji(emoji)
    }
+
    return (
       <div className={styles.emoji__picker}>
          {/* Display the selected emoji */}
@@ -27,4 +29,5 @@ const EmojiPicker = () => {
       </div>
    )
 }
+
 export default EmojiPicker
