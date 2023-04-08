@@ -9,31 +9,37 @@ const EmojiPicker = () => {
    // Function to handle when an emoji is clicked
    const handleEmojiClick = (emoji: string) => {
       setSelectedEmoji((prev) => {
-         return [...prev, emoji]
+         // Check if the emoji is already selected
+         const isSelected = prev.includes(emoji)
+
+         if (isSelected) {
+            // If the emoji is already selected, remove it from the array
+            return prev.filter((e) => e !== emoji)
+         } else {
+            // If the emoji is not already selected, add it to the array
+            return [...prev, emoji]
+         }
       })
    }
 
    return (
       <div className={styles.emoji__picker}>
-         {/* Display the selected emoji */}
-         <div className={styles.selected__emojis}>
-            {selectedEmoji.map((emoji, i) => {
-               return (
-                  <div key={i} className={styles.selected__emoji}>
-                     {emoji}
-                  </div>
-               )
-            })}
-         </div>
-
          <div className={styles.emoji__list}>
             {Object.keys(emojiData)
                .slice(0, 30)
-               .map((emoji) => (
-                  <span key={emoji} onClick={() => handleEmojiClick(emoji)} className={styles.emoji__item}>
-                     {emoji}
-                  </span>
-               ))}
+               .map((emoji) => {
+                  const isSelected = selectedEmoji.includes(emoji)
+
+                  return (
+                     <span
+                        key={emoji}
+                        className={`${styles.emoji__item} ${isSelected ? styles.selected : ''}`}
+                        onClick={() => handleEmojiClick(emoji)}
+                     >
+                        {emoji}
+                     </span>
+                  )
+               })}
          </div>
       </div>
    )
