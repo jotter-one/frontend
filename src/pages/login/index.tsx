@@ -7,6 +7,7 @@ import Head from 'next/head'
 import { GetServerSideProps } from 'next'
 import { withSSRContext } from 'aws-amplify'
 
+// eslint-disable-next-line @typescript-eslint/ban-types
 type Props = {}
 
 export default function Login() {
