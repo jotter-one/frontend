@@ -3,6 +3,11 @@ import { FcGoogle } from 'react-icons/fc'
 import { Auth } from 'aws-amplify'
 import { CognitoHostedUIIdentityProvider } from '@aws-amplify/auth/lib/types'
 import { ReactNode } from 'react'
+import Head from 'next/head'
+import { GetServerSideProps } from 'next'
+import { withSSRContext } from 'aws-amplify'
+
+type Props = {}
 
 export default function Login() {
    const handleGoogleLogin = () => {
@@ -10,6 +15,9 @@ export default function Login() {
    }
    return (
       <>
+         <Head>
+            <title>Jotter</title>
+         </Head>
          <div className='flex h-screen items-center justify-center px-4 py-12 sm:px-6 lg:px-8'>
             <div className='w-full max-w-md space-y-8'>
                <div>
@@ -37,4 +45,23 @@ export default function Login() {
 
 Login.getLayout = function PageLayout(page: ReactNode) {
    return <> {page}</>
+}
+
+export const getServerSideProps: GetServerSideProps<Props> = async (context) => {
+   const { Auth } = withSSRContext(context)
+   try {
+      await Auth.currentAuthenticatedUser()
+      return {
+         redirect: {
+            source: '/login',
+            destination: '/',
+            permanent: false,
+         },
+      }
+   } catch (err) {
+      console.log(err)
+      return {
+         props: {},
+      }
+   }
 }
