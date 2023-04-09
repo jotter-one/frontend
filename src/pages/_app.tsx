@@ -6,6 +6,7 @@ import { Amplify } from 'aws-amplify'
 import Navbar from '@/components/Navbar'
 import { NextPage } from 'next'
 import { ReactElement, ReactNode } from 'react'
+import ProtectedRoute from '@/util/auth'
 
 Amplify.configure({ ...awsExports, ssr: true })
 
@@ -22,11 +23,11 @@ export default function App({ Component, pageProps }: AppPropsWithLayout) {
       return Component.getLayout(<Component {...pageProps} />)
    }
    return (
-      <>
+      <ProtectedRoute>
          <Navbar />
          <div className='mx-auto w-full pt-6 px-2 sm:px-6 lg:px-8 mt-16'>
             <Component {...pageProps} />
          </div>
-      </>
+      </ProtectedRoute>
    )
 }
