@@ -1,22 +1,19 @@
 import CookieStorage from './util/CookieStorage'
 const awsExports = {
     Auth: {
-        userPoolId: "us-east-1_wjT6dH3AB",
-        region: "us-east-1",
-        userPoolWebClientId: "7i7h5rljnu29md0itos821grs0",
+        userPoolId: process.env.NEXT_PUBLIC_USER_POOL_ID,
+        region: process.env.NEXT_PUBLIC_REGION,
+        userPoolWebClientId: process.env.NEXT_PUBLIC_USER_POOL_WEB_CLIENT,
         oauth: {
-            domain: "jotter-one.auth.us-east-1.amazoncognito.com",
-            // redirectSignIn: "http://localhost:3000/",
-            // redirectSignOut: "http://localhost:3000/login",
-            // redirectSignIn: "https://jotter-frontend.vercel.app/",
-            // redirectSignOut: "https://jotter-frontend.vercel.app/login",
-            redirectSignIn: "https://jotter.one/",
-            redirectSignOut: "https://jotter.one/login",
+            domain: process.env.NEXT_PUBLIC_DOMAIN,
+            redirectSignIn: process.env.NEXT_PUBLIC_REDIRECT_SIGN_IN,
+            redirectSignOut: process.env.NEXT_PUBLIC_REDIRECT_SIGN_OUT,
             scope: ['email', 'profile', 'openid'],
             responseType: 'token',
         },
         storage: CookieStorage,
     },
 };
+
 
 export default awsExports;
