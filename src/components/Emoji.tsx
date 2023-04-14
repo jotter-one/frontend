@@ -3,20 +3,15 @@ import emojiData from 'emojilib'
 import styles from '../styles/Emoji.module.css'
 
 const EmojiPicker = () => {
-   // State to keep track of the selected emoji
    const [selectedEmoji, setSelectedEmoji] = useState<string[]>([])
 
-   // Function to handle when an emoji is clicked
    const handleEmojiClick = (emoji: string) => {
       setSelectedEmoji((prev) => {
-         // Check if the emoji is already selected
          const isSelected = prev.includes(emoji)
 
          if (isSelected) {
-            // If the emoji is already selected, remove it from the array
             return prev.filter((e) => e !== emoji)
          } else {
-            // If the emoji is not already selected, add it to the array
             return [...prev, emoji]
          }
       })
