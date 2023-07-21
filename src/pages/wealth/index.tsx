@@ -1,4 +1,4 @@
-import Head from 'next/head'
+import Head from 'next/head';
 export default function Login() {
    return (
       <>
@@ -7,5 +7,5 @@ export default function Login() {
          </Head>
          <h1>Hello , This is your wealth Manager</h1>
       </>
-   )
+   );
 }

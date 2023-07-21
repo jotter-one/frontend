@@ -1,21 +1,21 @@
-import React, { useState } from 'react'
-import emojiData from 'emojilib'
-import styles from '../styles/Emoji.module.css'
+import React, { useState } from 'react';
+import emojiData from 'emojilib';
+import styles from '../styles/Emoji.module.css';
 
 const EmojiPicker = () => {
-   const [selectedEmoji, setSelectedEmoji] = useState<string[]>([])
+   const [selectedEmoji, setSelectedEmoji] = useState<string[]>([]);
 
    const handleEmojiClick = (emoji: string) => {
       setSelectedEmoji((prev) => {
-         const isSelected = prev.includes(emoji)
+         const isSelected = prev.includes(emoji);
 
          if (isSelected) {
-            return prev.filter((e) => e !== emoji)
+            return prev.filter((e) => e !== emoji);
          } else {
-            return [...prev, emoji]
+            return [...prev, emoji];
          }
-      })
-   }
+      });
+   };
 
    return (
       <div className={styles.emoji__picker}>
@@ -23,7 +23,7 @@ const EmojiPicker = () => {
             {Object.keys(emojiData)
                .slice(0, 30)
                .map((emoji) => {
-                  const isSelected = selectedEmoji.includes(emoji)
+                  const isSelected = selectedEmoji.includes(emoji);
 
                   return (
                      <span
@@ -33,11 +33,11 @@ const EmojiPicker = () => {
                      >
                         {emoji}
                      </span>
-                  )
+                  );
                })}
          </div>
       </div>
-   )
-}
+   );
+};
 
-export default EmojiPicker
+export default EmojiPicker;

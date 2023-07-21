@@ -1,6 +1,6 @@
-import EmojiPicker from '@/components/Emoji'
-import Diary from '../components/Diary'
-import Head from 'next/head'
+import EmojiPicker from '@/components/Emoji';
+import Diary from '../components/Diary';
+import Head from 'next/head';
 
 export default function Home() {
    return (
@@ -19,5 +19,5 @@ export default function Home() {
             </div>
          </div>
       </>
-   )
+   );
 }

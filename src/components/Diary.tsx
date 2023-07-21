@@ -1,12 +1,12 @@
-import { useState } from 'react'
-import styles from '../styles/Diary.module.css'
+import { useState } from 'react';
+import styles from '../styles/Diary.module.css';
 function NotebookPaperTextarea() {
-   const [value, setValue] = useState('')
+   const [value, setValue] = useState('');
 
    function handleChange(event: React.ChangeEvent<HTMLTextAreaElement>) {
-      setValue(event.target.value)
-      event.target.style.height = 'auto'
-      event.target.style.height = event.target.scrollHeight + 'px'
+      setValue(event.target.value);
+      event.target.style.height = 'auto';
+      event.target.style.height = event.target.scrollHeight + 'px';
    }
 
    return (
@@ -22,7 +22,7 @@ function NotebookPaperTextarea() {
             ></textarea>
          </div>
       </div>
-   )
+   );
 }
 
-export default NotebookPaperTextarea
+export default NotebookPaperTextarea;

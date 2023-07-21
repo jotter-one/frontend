@@ -1,27 +1,27 @@
 /* eslint-disable @next/next/no-img-element */
-import { Fragment } from 'react'
-import { Disclosure, Menu, Transition } from '@headlessui/react'
-import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
-import { useRouter } from 'next/router'
-import Image from 'next/image'
-import { Auth } from 'aws-amplify'
-import Link from 'next/link'
-import Logo from '../../public/logo.png'
+import { Fragment } from 'react';
+import { Disclosure, Menu, Transition } from '@headlessui/react';
+import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline';
+import { useRouter } from 'next/router';
+import Image from 'next/image';
+import { Auth } from 'aws-amplify';
+import Link from 'next/link';
+import Logo from '../../public/logo.png';
 const navigation = [
    { name: 'Home', href: '/' },
    { name: 'Wealth Manager', href: '/wealth' },
    { name: 'Marketplace', href: '/marketplace' },
-]
+];
 
 function classNames(...classes: string[]) {
-   return classes.filter(Boolean).join(' ')
+   return classes.filter(Boolean).join(' ');
 }
 
 export default function Navbar() {
-   const router = useRouter()
+   const router = useRouter();
    const handleSignOut = () => {
-      Auth.signOut()
-   }
+      Auth.signOut();
+   };
    return (
       <Disclosure as='nav' className='bg-gray-800 w-full fixed z-10 top-0'>
          {({ open }) => (
@@ -160,5 +160,5 @@ export default function Navbar() {
             </>
          )}
       </Disclosure>
-   )
+   );
 }

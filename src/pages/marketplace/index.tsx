@@ -1,4 +1,4 @@
-import Head from 'next/head'
+import Head from 'next/head';
 export default function Marketplace() {
    return (
       <>
@@ -7,5 +7,5 @@ export default function Marketplace() {
          </Head>
          <h1>Hello , This is your marketplace to download extensions to add more functionalities to your diary</h1>
       </>
-   )
+   );
 }

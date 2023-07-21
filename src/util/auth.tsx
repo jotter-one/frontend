@@ -1,31 +1,31 @@
-import { useEffect, useState } from 'react'
-import { useRouter } from 'next/router'
-import { Auth } from 'aws-amplify'
+import { useEffect, useState } from 'react';
+import { useRouter } from 'next/router';
+import { Auth } from 'aws-amplify';
 
 type ProtectedRouteProps = {
-   children: React.ReactNode
-}
+   children: React.ReactNode;
+};
 
 export default function ProtectedRoute({ children }: ProtectedRouteProps) {
-   const router = useRouter()
-   const [isAuthenticated, setIsAuthenticated] = useState(false)
+   const router = useRouter();
+   const [isAuthenticated, setIsAuthenticated] = useState(false);
 
    useEffect(() => {
       async function checkAuth() {
          try {
-            await Auth.currentAuthenticatedUser()
-            setIsAuthenticated(true)
+            await Auth.currentAuthenticatedUser();
+            setIsAuthenticated(true);
          } catch {
-            router.push('/login')
+            router.push('/login');
          }
       }
 
-      checkAuth()
-   }, [router])
+      checkAuth();
+   }, [router]);
 
    if (!isAuthenticated) {
-      return null
+      return null;
    }
 
-   return <div className='protected-component'>{children}</div>
+   return <div className='protected-component'>{children}</div>;
 }

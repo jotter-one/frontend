@@ -1,19 +1,19 @@
 /* eslint-disable @next/next/no-img-element */
-import { FcGoogle } from 'react-icons/fc'
-import { Auth } from 'aws-amplify'
-import { CognitoHostedUIIdentityProvider } from '@aws-amplify/auth/lib/types'
-import { ReactNode } from 'react'
-import Head from 'next/head'
-import { GetServerSideProps } from 'next'
-import { withSSRContext } from 'aws-amplify'
+import { FcGoogle } from 'react-icons/fc';
+import { Auth } from 'aws-amplify';
+import { CognitoHostedUIIdentityProvider } from '@aws-amplify/auth/lib/types';
+import { ReactNode } from 'react';
+import Head from 'next/head';
+import { GetServerSideProps } from 'next';
+import { withSSRContext } from 'aws-amplify';
 
 // eslint-disable-next-line @typescript-eslint/ban-types
-type Props = {}
+type Props = {};
 
 export default function Login() {
    const handleGoogleLogin = () => {
-      Auth.federatedSignIn({ provider: CognitoHostedUIIdentityProvider.Google })
-   }
+      Auth.federatedSignIn({ provider: CognitoHostedUIIdentityProvider.Google });
+   };
    return (
       <>
          <Head>
@@ -41,28 +41,28 @@ export default function Login() {
             </div>
          </div>
       </>
-   )
+   );
 }
 
 Login.getLayout = function PageLayout(page: ReactNode) {
-   return <> {page}</>
-}
+   return <> {page}</>;
+};
 
 export const getServerSideProps: GetServerSideProps<Props> = async (context) => {
-   const { Auth } = withSSRContext(context)
+   const { Auth } = withSSRContext(context);
    try {
-      await Auth.currentAuthenticatedUser()
+      await Auth.currentAuthenticatedUser();
       return {
          redirect: {
             source: '/login',
             destination: '/',
             permanent: false,
          },
-      }
+      };
    } catch (err) {
-      console.log(err)
+      console.log(err);
       return {
          props: {},
-      }
+      };
    }
-}
+};
