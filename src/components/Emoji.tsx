@@ -24,7 +24,6 @@ const EmojiPicker = () => {
                .slice(0, 30)
                .map((emoji) => {
                   const isSelected = selectedEmoji.includes(emoji);
-
                   return (
                      <span
                         key={emoji}
