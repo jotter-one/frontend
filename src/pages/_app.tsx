@@ -12,26 +12,26 @@ import ProtectedRoute from '@/util/auth';
 Amplify.configure({ ...awsExports, ssr: true });
 
 export type NextPageWithLayout<P = {}, IP = P> = NextPage<P, IP> & {
-  getLayout?: (page: ReactElement) => ReactNode;
+   getLayout?: (page: ReactElement) => ReactNode;
 };
 
 type AppPropsWithLayout = AppProps & {
-  Component: NextPageWithLayout;
+   Component: NextPageWithLayout;
 };
 
 export default function App({ Component, pageProps }: AppPropsWithLayout) {
-  return (
-    <ConfigProvider theme={theme}>
-      {Component.getLayout ? (
-        <Component {...pageProps} />
-      ) : (
-        <ProtectedRoute>
-          <Navbar />
-          <div className='mx-auto w-full pt-6 px-2 sm:px-6 lg:px-8 mt-16'>
+   return (
+      <ConfigProvider theme={theme}>
+         {Component.getLayout ? (
             <Component {...pageProps} />
-          </div>
-        </ProtectedRoute>
-      )}
-    </ConfigProvider>
-  );
+         ) : (
+            <ProtectedRoute>
+               <Navbar />
+               <div className='mx-auto w-full pt-6 px-2 sm:px-6 lg:px-8 mt-16'>
+                  <Component {...pageProps} />
+               </div>
+            </ProtectedRoute>
+         )}
+      </ConfigProvider>
+   );
 }
