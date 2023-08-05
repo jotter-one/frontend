@@ -1,11 +1,16 @@
 .navBar{
     display: flex;
+    z-index: 100;
     justify-content: space-between;
     padding: 0.2vh 15vw;
     align-items: center;
     height: 8vh;
-    background-color: var(--primary);
+    background-color: var(--secondary);
     font-size: var(--small);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
 }
 
 .logoAndLinks{
