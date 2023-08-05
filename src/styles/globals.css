@@ -7,10 +7,6 @@
    font-family: 'Roboto Mono', monospace;
 }
 
-/* button:focus {
-   border: none;
-} */
-
 a:hover {
    cursor: pointer;
 }
