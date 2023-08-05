@@ -1,0 +1,35 @@
+.navBar{
+    display: flex;
+    justify-content: space-between;
+    padding: 0.2vh 15vw;
+    align-items: center;
+    height: 8vh;
+    background-color: var(--primary);
+    font-size: var(--small);
+}
+
+.logoAndLinks{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo{
+    height:4vh;
+    display: flex;
+    align-content: center;
+    margin: 0 1vw;
+}
+
+.links{
+    display: flex;
+    align-items: center;
+}
+
+.link{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 0 0.5vw;
+}
