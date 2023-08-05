@@ -1,4 +1,5 @@
 import '@/styles/globals.css';
+import '../styles/stylepalette.css';
 import type { AppProps } from 'next/app';
 import awsExports from '../aws-exports';
 import { Amplify } from 'aws-amplify';
