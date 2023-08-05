@@ -39,9 +39,6 @@ export default function Login() {
                   />
                </span>
                <br />
-               <p className={styles.bottomParagraph}>
-                  Unlock the power to capture your thoughts, dreams, and emotions in the most imaginative way possible!
-               </p>
             </div>
          </div>
          <div className={styles.rightContainer}>
@@ -52,7 +49,11 @@ export default function Login() {
             >
                Sign in with Google
             </Button>
-            <Button onClick={handleGoogleLogin} icon={<FaFacebook />} className={styles.facebookButton}>
+            <Button
+               onClick={handleGoogleLogin}
+               icon={<FaFacebook style={{ color: 'blue' }} />}
+               className={styles.facebookButton}
+            >
                Sign in with Facebook
             </Button>
          </div>
