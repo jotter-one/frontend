@@ -5,7 +5,8 @@
 
 .emoji {
    font-size: 50px;
-   margin: 10px;
+   margin: 1.3vw;
+   padding: 0.3vw;
    cursor: pointer;
    transition: transform 0.2s;
    background-color: transparent; /* Set default background color as transparent */
@@ -22,8 +23,10 @@
 /* Updated CSS with responsive font sizes and border radius */
 @media (max-width: 640px) {
    .emoji {
-      font-size: 45px;
+      font-size: 38px;
       border-radius: 2px;
+      margin: 2.2vw;
+      padding: 0.2vw;
    }
 }
 
@@ -31,6 +34,8 @@
    .emoji {
       font-size: 40px;
       border-radius: 12px;
+      margin: 2vw;
+      padding: 0.2vw;
    }
 }
 
@@ -38,6 +43,8 @@
    .emoji {
       font-size: 45px;
       border-radius: 14px;
+      margin: 1.7vw;
+      padding: 0.3vw;
    }
 }
 
