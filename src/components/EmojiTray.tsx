@@ -49,7 +49,7 @@ const EmojiPicker = () => {
 
    return (
       <div>
-         <div className={emojiPickerStyles.greeting}>Hi {username}</div>
+         <div className={emojiPickerStyles.greeting}>Hi, {username}</div>
          <div className={emojiPickerStyles.question}>How are you feeling today?</div>
          <div className={emojiPickerStyles.emojiTray}>
             {emojiTrayBoxes.map((emojiTrayBox) => (
