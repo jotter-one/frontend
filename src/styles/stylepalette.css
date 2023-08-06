@@ -1,7 +1,9 @@
 :root{
     --primary: #EAF4F1;
     --secondary: #fff;
-    --tiny: 1rem;
+    --paleblue: #e2e8f0;
+    --steelblue: #475569;
+    --tiny: 0.7rem;
     --small: 1.1rem;
     --medium: 1.2rem;
     --large: 1.55rem;
