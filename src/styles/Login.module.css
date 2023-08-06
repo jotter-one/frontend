@@ -2,6 +2,9 @@
 .mainContainer {
    display: grid;
    height: 100vh; /* Set mainContainer to full viewport height */
+   width: 100vw;
+   position: absolute;
+   left: 0;
 }
 
 .leftContainer {
@@ -84,6 +87,10 @@
       background: linear-gradient(to bottom, #dfffd7, rgba(74, 128, 112, 0));
       padding: 30px; /* Adjusted padding for small screens */
    }
+
+   .animatedTyping {
+      font-size: 36px;
+   }
 }
 
 /* Medium screen size (768px - 1023px) */
@@ -96,6 +103,10 @@
       background: linear-gradient(to bottom, #dfffd7, rgba(74, 128, 112, 0));
       padding: 40px; /* Adjusted padding for medium screens */
    }
+
+   .animatedTyping {
+      font-size: 38px;
+   }
 }
 
 /* Large screen size (1024px - 1279px) */
@@ -106,6 +117,10 @@
 
    .leftContainer {
       padding: 60px; /* Adjusted padding for large screens */
+   }
+
+   .animatedTyping {
+      font-size: 40px;
    }
 }
 
