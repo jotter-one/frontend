@@ -30,8 +30,8 @@ const EmojiPicker = () => {
    ]
 
    return (<div>
-      <div>Hi Pamuditha</div>
-      <div>How are you feeling today?</div>
+      <div className={emojiPickerStyles.greeting}>Hi Pamuditha</div>
+      <div className={emojiPickerStyles.question}>How are you feeling today?</div>
       <div className={emojiPickerStyles.emojiTray}>
          {emojiTrayBoxes.map((emojiTrayBox)=>(
             <EmojiBox emoji={emojiTrayBox.emoji} text={emojiTrayBox.text} key={emojiTrayBox.key} selectedEmoji={selectedEmoji} setSelectedEmoji={setSelectedEmoji}/>

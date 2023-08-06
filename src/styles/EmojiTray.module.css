@@ -4,3 +4,13 @@
    margin: 1vh 0;
    height: 75px;
 }
+
+.greeting{
+   color: var(--slateblue);
+   font-weight: 600;
+}
+
+.question{
+   font-weight: 600;
+   font-size: var(--small);
+}

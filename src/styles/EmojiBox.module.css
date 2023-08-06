@@ -7,8 +7,8 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 60px;
-    height: 60px;
+    width: 55px;
+    height: 55px;
     border-radius: 20%;
     background-color: var(--paleblue);
     margin: 0.2vw;
@@ -18,8 +18,8 @@
 }
 
 .emojiBoxSelected{
-    width: 70px;
-    height: 70px;
+    width: 65px;
+    height: 65px;
     background-color: var(--steelblue);
     color: var(--secondary);
 }
