@@ -9,30 +9,38 @@ const NavBar = () => {
       {
          key: 0,
          name: 'Diary',
-         link: '/'
-      },{
+         link: '/',
+      },
+      {
          key: 1,
          name: 'Wealth Manager',
-         link: '/'
-      },{
+         link: '/',
+      },
+      {
          key: 2,
          name: 'Extensions',
-         link: '/'
-      }
-   ]
-   return (<nav className={navBarStyles.navBar}>
-      <div className={navBarStyles.logoAndLinks}>
-      <div className={navBarStyles.logo}>
-         <Image src={jotterLogo} alt="Logo"/>
-      </div>
-      <div className={navBarStyles.links}>
-         {navigationLinks.map((link) => (
-            <Link href={link.link} key={link.key} className={navBarStyles.link}>{link.name}</Link>
-         ))}</div>
-      </div>
-      <div><ProfileIcon/></div>
-      
-   </nav>)
-}
+         link: '/',
+      },
+   ];
+   return (
+      <nav className={navBarStyles.navBar}>
+         <div className={navBarStyles.logoAndLinks}>
+            <div className={navBarStyles.logo}>
+               <Image src={jotterLogo} alt='Logo' />
+            </div>
+            <div className={navBarStyles.links}>
+               {navigationLinks.map((link) => (
+                  <Link href={link.link} key={link.key} className={navBarStyles.link}>
+                     {link.name}
+                  </Link>
+               ))}
+            </div>
+         </div>
+         <div>
+            <ProfileIcon />
+         </div>
+      </nav>
+   );
+};
 
 export default NavBar;

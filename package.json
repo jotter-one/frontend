@@ -19,7 +19,6 @@
       "@typescript-eslint/eslint-plugin": "^5.57.1",
       "antd": "^5.8.2",
       "aws-amplify": "^5.0.22",
-      "emojilib": "^3.0.10",
       "eslint": "8.37.0",
       "eslint-config-next": "13.2.4",
       "eslint-config-prettier": "^8.8.0",
