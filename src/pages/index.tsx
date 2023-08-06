@@ -1,3 +1,4 @@
+import EmojiPicker from '@/components/EmojiTray';
 import Diary from '../components/Diary';
 import Head from 'next/head';
 

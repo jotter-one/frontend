@@ -1,0 +1,6 @@
+.emojiTray{
+   display: flex;
+   align-items: center;
+   margin: 1vh 0;
+   height: 75px;
+}
