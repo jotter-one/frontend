@@ -1,7 +1,5 @@
 import Link from 'next/link';
 import navBarStyles from '../styles/NavBar.module.css';
-import jotterLogo from '../../public/jotterlogo.svg';
-import Image from 'next/image';
 import ProfileIcon from './ProfileIcon';
 
 const NavBar = () => {
@@ -26,7 +24,7 @@ const NavBar = () => {
       <nav className={navBarStyles.navBar}>
          <div className={navBarStyles.logoAndLinks}>
             <div className={navBarStyles.logo}>
-               <Image src={jotterLogo} alt='Logo' />
+               <div className={navBarStyles.jotterLogo}>Jotter</div>
             </div>
             <div className={navBarStyles.links}>
                {navigationLinks.map((link) => (

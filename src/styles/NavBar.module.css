@@ -20,10 +20,9 @@
 }
 
 .logo {
-   height: 4vh;
+   line-height: 8vh;
    display: flex;
    align-content: center;
-   margin: 0 1vw;
 }
 
 .links {
@@ -37,4 +36,13 @@
    align-items: center;
    text-align: center;
    margin: 0 0.5vw;
+}
+
+.jotterLogo{
+   display: flex;
+   font-size: var(--xl);
+   text-align: center;
+   align-items: center;
+   font-weight: 600;
+   margin: 0 1vw 0 0;
 }
