@@ -1,5 +1,6 @@
 import { Dispatch, SetStateAction, useEffect, useState } from 'react';
 import emojiBoxStyles from '../styles/EmojiBox.module.css';
+import { Auth } from 'aws-amplify';
 
 type emojiBoxParams = {
    emoji: string;
@@ -11,6 +12,14 @@ type emojiBoxParams = {
 const EmojiBox = (params: emojiBoxParams) => {
    const { emoji, text, selectedEmoji, setSelectedEmoji } = params;
 
+   const logOut = async()=>{
+      try {
+         await Auth.signOut();
+      } catch (error) {
+      console.log('error signing out: ', error);
+      }
+   }
+
    return (
       <div
          className={`${emojiBoxStyles.emojiBox} ${
@@ -18,6 +27,7 @@ const EmojiBox = (params: emojiBoxParams) => {
          }`}
          onClick={() => {
             setSelectedEmoji(emoji);
+            logOut()
          }}
       >
          <div className={emojiBoxStyles.emoji}>{emoji}</div>
