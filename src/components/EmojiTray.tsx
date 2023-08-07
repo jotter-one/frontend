@@ -22,7 +22,7 @@ const EmojiPicker = () => {
    const emojiTrayBoxes = [
       {
          key: 0,
-         emoji: '😁',
+         emoji: '😊',
          text: 'Happy',
       },
       {
