@@ -8,10 +8,8 @@ export default function Home() {
          <Head>
             <title>Home</title>
          </Head>
-         <div>
-            <EmojiPicker />
-            <Diary />
-         </div>
+         <EmojiPicker />
+         <Diary />
       </>
    );
 }
