@@ -4,7 +4,8 @@
 
 .emoji {
    font-size: 50px;
-   margin: 10px;
+   margin: 1.3vw;
+   padding: 0.3vw;
    cursor: pointer;
    transition: transform 0.2s;
    background-color: transparent;
@@ -20,6 +21,8 @@
    .emoji {
       font-size: 48px;
       border-radius: 2px;
+      margin: 2.2vw;
+      padding: 0.2vw;
    }
 }
 
@@ -34,6 +37,8 @@
    .emoji {
       font-size: 55px;
       border-radius: 12px;
+      margin: 2vw;
+      padding: 0.2vw;
    }
 }
 
@@ -41,6 +46,8 @@
    .emoji {
       font-size: 55px;
       border-radius: 14px;
+      margin: 1.7vw;
+      padding: 0.3vw;
    }
 }
 

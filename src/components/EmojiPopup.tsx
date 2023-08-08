@@ -1,7 +1,7 @@
 import styles from '../../src/styles/EmojiContainerLogin.module.css'; // Import CSS module
 
 const EmojiPopupComponent = () => {
-   const emojis = ['😀', '😍', '🚀', '🎉', '🍔'];
+   const emojis = ['😊', '😍', '🚀', '🎉', '🍔'];
 
    return (
       <div className={styles.emojiContainer}>

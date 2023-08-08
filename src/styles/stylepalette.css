@@ -1,7 +1,11 @@
-:root{
-    --primary: #EAF4F1;
-    --tiny: 1rem;
-    --small: 1.1rem;
-    --medium: 1.2rem;
-    --large: 1.55rem;
+:root {
+   --primary: #eaf4f1;
+   --secondary: #fff;
+   --paleblue: #e2e8f0;
+   --steelblue: #475569;
+   --slateblue: #94a3b8;
+   --tiny: 0.7rem;
+   --small: 1.1rem;
+   --medium: 1.2rem;
+   --large: 1.55rem;
 }

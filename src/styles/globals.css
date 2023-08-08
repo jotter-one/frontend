@@ -7,6 +7,11 @@
    font-family: 'Roboto Mono', monospace;
 }
 
+body{
+   background-color: var(--primary);
+   padding: 0 15vw;
+}
+
 a:hover {
    cursor: pointer;
 }
