@@ -1,5 +1,4 @@
-/* Original CSS */
-.emoji-container {
+.emojiContainer {
    display: flex;
 }
 
@@ -9,30 +8,34 @@
    padding: 0.3vw;
    cursor: pointer;
    transition: transform 0.2s;
-   background-color: transparent; /* Set default background color as transparent */
+   background-color: transparent;
 }
 
-/* Set the third emoji to be hovered by default */
-.emoji:nth-child(3),
 .emoji:hover {
    transform: scale(1.5);
-   background: var(--slate-600, #475569); /* Add the background color when hovering */
-   border-radius: 16px; /* Add the border radius when hovering */
+   background: var(--slate-600, #475569);
+   border-radius: 16px;
 }
 
-/* Updated CSS with responsive font sizes and border radius */
-@media (max-width: 640px) {
+@media (max-width: 480px) {
    .emoji {
-      font-size: 38px;
+      font-size: 48px;
       border-radius: 2px;
       margin: 2.2vw;
       padding: 0.2vw;
    }
 }
 
+@media (min-width: 481px) and (max-width: 640px) {
+   .emoji {
+      font-size: 52px;
+      border-radius: 10px;
+   }
+}
+
 @media (min-width: 641px) and (max-width: 768px) {
    .emoji {
-      font-size: 40px;
+      font-size: 55px;
       border-radius: 12px;
       margin: 2vw;
       padding: 0.2vw;
@@ -41,7 +44,7 @@
 
 @media (min-width: 769px) and (max-width: 1024px) {
    .emoji {
-      font-size: 45px;
+      font-size: 55px;
       border-radius: 14px;
       margin: 1.7vw;
       padding: 0.3vw;
@@ -50,14 +53,14 @@
 
 @media (min-width: 1025px) and (max-width: 1280px) {
    .emoji {
-      font-size: 48px;
+      font-size: 55px;
       border-radius: 16px;
    }
 }
 
 @media (min-width: 1281px) and (max-width: 1536px) {
    .emoji {
-      font-size: 50px; /* Default font size for 'xl' and '2xl' screens */
+      font-size: 55px;
       border-radius: 16px;
    }
 }

@@ -1,4 +1,3 @@
-/* Define CSS styles for the layout */
 .mainContainer {
    display: grid;
    height: 100vh; /* Set mainContainer to full viewport height */
@@ -12,14 +11,13 @@
    flex-direction: column;
    justify-content: space-between;
    position: relative;
-   /* Apply the gradient background */
    background: linear-gradient(to right, #dfffd7, rgba(74, 128, 112, 0));
-   padding: 40px; /* Add the desired padding (reduced padding for all screen sizes) */
-   height: 100%; /* Set leftContainer to take full height */
+   padding: 40px;
+   height: 100%;
 }
 
 .rightContainer {
-   height: 100%; /* Set rightContainer to take full height */
+   height: 100%;
 }
 
 .animatedTyping {
@@ -27,22 +25,23 @@
    font-size: 48px;
    font-style: normal;
    font-weight: 800;
-   line-height: 48px; /* 100% */
-   letter-spacing: -0.576px;
+   line-height: 48px;
+   letter-spacing: -2px;
 }
 
 .rightContainer {
    display: flex;
    flex-direction: column;
-   justify-content: center; /* Center items vertically */
-   align-items: center; /* Center items horizontally */
-   height: 100%; /* Set rightContainer to take full height */
+   justify-content: center;
+   align-items: center;
+   height: 100%;
    padding: 20px;
 }
+
 .googleButton,
 .facebookButton {
-   width: 100%; /* Set buttons to full width */
-   margin-bottom: 10px; /* Optional: Add some space between buttons */
+   width: 100%;
+   margin-bottom: 10px;
 }
 
 .logoName {
@@ -50,7 +49,7 @@
    font-size: 48px;
    font-style: normal;
    font-weight: 800;
-   line-height: 48px; /* 100% */
+   line-height: 48px;
    letter-spacing: -6px;
 }
 
@@ -58,7 +57,24 @@
    letter-spacing: -1.5px;
 }
 
-/* Extra small screen size (up to 639px) */
+@media (max-width: 480px) {
+   .emojiPopupContainer {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+   }
+}
+
+@media (min-width: 481px) and (max-width: 640px) {
+   .emojiPopupContainer {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+   }
+}
+
 @media (max-width: 639px) {
    .mainContainer {
       grid-template-columns: 1fr;
@@ -69,23 +85,7 @@
    }
    .leftContainer {
       background: linear-gradient(to bottom, #dfffd7, rgba(74, 128, 112, 0));
-      padding: 20px; /* Adjusted padding for extra small screens */
-   }
-
-   .animatedTyping {
-      font-size: 32px;
-   }
-}
-
-/* Small screen size (640px - 767px) */
-@media (min-width: 640px) and (max-width: 767px) {
-   .mainContainer {
-      grid-template-columns: 1fr;
-   }
-
-   .leftContainer {
-      background: linear-gradient(to bottom, #dfffd7, rgba(74, 128, 112, 0));
-      padding: 30px; /* Adjusted padding for small screens */
+      padding: 20px;
    }
 
    .animatedTyping {
@@ -93,7 +93,21 @@
    }
 }
 
-/* Medium screen size (768px - 1023px) */
+@media (min-width: 640px) and (max-width: 767px) {
+   .mainContainer {
+      grid-template-columns: 1fr;
+   }
+
+   .leftContainer {
+      background: linear-gradient(to bottom, #dfffd7, rgba(74, 128, 112, 0));
+      padding: 40px;
+   }
+
+   .animatedTyping {
+      font-size: 36px;
+   }
+}
+
 @media (min-width: 768px) and (max-width: 1023px) {
    .mainContainer {
       grid-template-columns: 1fr;
@@ -101,7 +115,7 @@
 
    .leftContainer {
       background: linear-gradient(to bottom, #dfffd7, rgba(74, 128, 112, 0));
-      padding: 40px; /* Adjusted padding for medium screens */
+      padding: 40px;
    }
 
    .animatedTyping {
@@ -109,14 +123,13 @@
    }
 }
 
-/* Large screen size (1024px - 1279px) */
 @media (min-width: 1024px) and (max-width: 1279px) {
    .mainContainer {
       grid-template-columns: 5fr 4fr;
    }
 
    .leftContainer {
-      padding: 60px; /* Adjusted padding for large screens */
+      padding: 60px;
    }
 
    .animatedTyping {
@@ -124,24 +137,22 @@
    }
 }
 
-/* Extra large screen size (1280px - 1535px) */
 @media (min-width: 1280px) and (max-width: 1535px) {
    .mainContainer {
       grid-template-columns: 5fr 4fr;
    }
 
    .leftContainer {
-      padding: 70px; /* Adjusted padding for extra large screens */
+      padding: 70px;
    }
 }
 
-/* 2XL screen size (1536px and above) */
 @media (min-width: 1536px) {
    .mainContainer {
       grid-template-columns: 5fr 4fr;
    }
 
    .leftContainer {
-      padding: 80px; /* Adjusted padding for 2XL screens */
+      padding: 80px;
    }
 }

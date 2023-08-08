@@ -4,7 +4,7 @@ const EmojiPopupComponent = () => {
    const emojis = ['😊', '😍', '🚀', '🎉', '🍔'];
 
    return (
-      <div className={styles['emoji-container']}>
+      <div className={styles.emojiContainer}>
          {emojis.map((emoji, index) => (
             <span key={index} className={styles.emoji}>
                {emoji}
