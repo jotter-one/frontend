@@ -24,20 +24,23 @@ export default function Login() {
          <div className={styles.leftContainer}>
             <p className={styles.logoName}> 📒 Jotter</p>
             <div>
-               <EmojiPopupComponent />
-               <br />
-               <br />
-               <span className={styles.animatedTyping}>
-                  <Typewriter
-                     words={['Your digital diary.', 'Manage your wealth.']}
-                     loop={false}
-                     cursor
-                     cursorStyle='|'
-                     typeSpeed={70}
-                     deleteSpeed={50}
-                     delaySpeed={1000}
-                  />
-               </span>
+               <div className={styles.emojiPopupContainer}>
+                  <EmojiPopupComponent />
+                  <br />
+                  <br />
+                  <span className={styles.animatedTyping}>
+                     <Typewriter
+                        words={['Your digital diary.', 'Manage your wealth.']}
+                        loop={false}
+                        cursor
+                        cursorStyle='|'
+                        typeSpeed={150}
+                        deleteSpeed={50}
+                        delaySpeed={1000}
+                     />
+                  </span>
+               </div>
+
                <br />
             </div>
          </div>
