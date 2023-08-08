@@ -26,7 +26,7 @@
    font-style: normal;
    font-weight: 800;
    line-height: 48px;
-   letter-spacing: -2px;
+   letter-spacing: -2.5px;
 }
 
 .rightContainer {
@@ -57,7 +57,7 @@
    letter-spacing: -1.5px;
 }
 
-@media (max-width: 400px) {
+@media (max-width: 380px) {
    .emojiPopupContainer {
       display: flex;
       flex-direction: column;
@@ -81,7 +81,7 @@
    }
 }
 
-@media (min-width: 401px) and (max-width: 480px) {
+@media (min-width: 381px) and (max-width: 480px) {
    .emojiPopupContainer {
       display: flex;
       flex-direction: column;
