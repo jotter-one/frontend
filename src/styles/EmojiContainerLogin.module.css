@@ -11,7 +11,7 @@
    background-color: transparent;
 }
 
-.emoji:hover {
+.hovered {
    transform: scale(1.5);
    background: var(--slate-600, #475569);
    border-radius: 16px;
@@ -19,7 +19,7 @@
 
 @media (max-width: 480px) {
    .emoji {
-      font-size: 48px;
+      font-size: 42px;
       border-radius: 2px;
       margin: 2.2vw;
       padding: 0.2vw;
@@ -28,7 +28,7 @@
 
 @media (min-width: 481px) and (max-width: 640px) {
    .emoji {
-      font-size: 52px;
+      font-size: 46px;
       border-radius: 10px;
    }
 }
