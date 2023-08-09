@@ -11,6 +11,8 @@ import { Button } from 'antd';
 import styles from '../../styles/Login.module.css';
 import EmojiPopupComponent from '@/components/EmojiPopup';
 import { Typewriter } from 'react-simple-typewriter';
+import Logo from '../../../public/logo.png';
+import Image from 'next/image';
 
 type Props = {};
 
@@ -22,7 +24,10 @@ export default function Login() {
    return (
       <div className={styles.mainContainer}>
          <div className={styles.leftContainer}>
-            <p className={styles.logoName}> 📒 Jotter</p>
+            <div className={styles.logoContainer}>
+               <Image width={50} height={70} src={Logo} alt='jotter' />
+               <p className={styles.logoName}> Jotter</p>
+            </div>
             <div>
                <div className={styles.emojiPopupContainer}>
                   <EmojiPopupComponent />

@@ -11,7 +11,7 @@
    flex-direction: column;
    justify-content: space-between;
    position: relative;
-   background: linear-gradient(to right, #dfffd7, rgba(74, 128, 112, 0));
+   background: linear-gradient(to right, #eaf4f1, rgba(74, 128, 112, 0));
    padding: 40px;
    height: 100%;
 }
@@ -19,14 +19,18 @@
 .rightContainer {
    height: 100%;
 }
+.logoContainer {
+   display: flex;
+   gap: 0.5rem;
+}
 
 .animatedTyping {
    color: var(--slate-800, #202835);
    font-size: 48px;
    font-style: normal;
-   font-weight: 800;
+   font-weight: 700;
    line-height: 48px;
-   letter-spacing: -2.5px;
+   letter-spacing: -2px;
 }
 
 .rightContainer {
@@ -46,11 +50,12 @@
 
 .logoName {
    color: var(--slate-800, #202835);
+   font-family: 'Roboto Mono', monospace;
    font-size: 48px;
    font-style: normal;
    font-weight: 800;
    line-height: 48px;
-   letter-spacing: -6px;
+   letter-spacing: -9px;
 }
 
 .bottomParagraph {
@@ -72,7 +77,7 @@
       justify-content: flex-start;
    }
    .leftContainer {
-      background: linear-gradient(to bottom, #dfffd7, rgba(74, 128, 112, 0));
+      background: linear-gradient(to bottom, #eaf4f1, rgba(74, 128, 112, 0));
       padding: 20px;
    }
 
@@ -96,7 +101,7 @@
       justify-content: flex-start;
    }
    .leftContainer {
-      background: linear-gradient(to bottom, #dfffd7, rgba(74, 128, 112, 0));
+      background: linear-gradient(to bottom, #eaf4f1, rgba(74, 128, 112, 0));
       padding: 20px;
    }
 
@@ -120,7 +125,7 @@
       justify-content: flex-start;
    }
    .leftContainer {
-      background: linear-gradient(to bottom, #dfffd7, rgba(74, 128, 112, 0));
+      background: linear-gradient(to bottom, #eaf4f1, rgba(74, 128, 112, 0));
       padding: 20px;
    }
 
@@ -134,7 +139,7 @@
    }
 
    .leftContainer {
-      background: linear-gradient(to bottom, #dfffd7, rgba(74, 128, 112, 0));
+      background: linear-gradient(to bottom, #eaf4f1, rgba(74, 128, 112, 0));
       padding: 40px;
    }
 
@@ -149,7 +154,7 @@
    }
 
    .leftContainer {
-      background: linear-gradient(to bottom, #dfffd7, rgba(74, 128, 112, 0));
+      background: linear-gradient(to bottom, #eaf4f1, rgba(74, 128, 112, 0));
       padding: 40px;
    }
 
