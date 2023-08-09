@@ -10,7 +10,7 @@ function NotebookPaperTextarea() {
    }
 
    return (
-      <div className='bg-white shadow rounded-md p-4'>
+      <div className='shadow rounded-sm p-1'>
          <div className='h-2 rounded-t-md'></div>
          <div className='relative'>
             <textarea

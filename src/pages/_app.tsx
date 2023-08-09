@@ -3,12 +3,12 @@ import '../styles/stylepalette.css';
 import type { AppProps } from 'next/app';
 import awsExports from '../aws-exports';
 import { Amplify } from 'aws-amplify';
-import { ConfigProvider } from 'antd'; // Import the ConfigProvider
-import theme from '../theme/themeConfig'; // Import your custom theme
-import Navbar from '@/components/Navbar';
+import { ConfigProvider } from 'antd';
+import theme from '../theme/themeConfig';
 import { NextPage } from 'next';
 import { ReactElement, ReactNode } from 'react';
 import ProtectedRoute from '@/util/auth';
+import Navbar from '@/components/Navbar';
 
 Amplify.configure({ ...awsExports, ssr: true });
 
