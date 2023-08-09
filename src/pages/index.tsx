@@ -1,19 +1,17 @@
+import React, { useState } from 'react';
 import Diary from '../components/Diary';
 import Head from 'next/head';
 import styles from '../styles/Home.module.css';
-import EmojiPopupComponent from '@/components/EmojiPopup';
 import EmojiTray from '@/components/EmojiTray';
 import faceEmojis from '../util/emojis';
-import type { DatePickerProps } from 'antd';
-import { DatePicker, Space, Tag } from 'antd';
-import { useState } from 'react';
+import { DatePicker, Tag } from 'antd';
 
 export default function Home() {
-   const [selectedDate, setSelectedDate] = useState(new Date());
+   const [selectedDate, setSelectedDate] = useState<Date>(new Date());
 
-   const handleEmojiSelection = (selectedEmojis) => {
-      console.log('Selected Emojis:', selectedEmojis);
-      // Do something with the selected emojis (e.g., store in state)
+   const handleEmojiSelection = (selectedEmoji: string) => {
+      console.log('Selected Emoji:', selectedEmoji);
+      // Do something with the selected emoji (e.g., store in state)
    };
 
    const renderDateLabel = () => {
@@ -43,7 +41,7 @@ export default function Home() {
          </Head>
          <div>
             <div className={styles.dateContainer}>
-               <Tag color='gold' style={{ padding: '0 10px 0 10px' }}>
+               <Tag color='green' style={{ padding: '0 10px 0 10px' }}>
                   <p className={styles.date}>{renderDateLabel()}</p>
                </Tag>
 
@@ -51,19 +49,20 @@ export default function Home() {
                   className={styles.datePicker}
                   onChange={(date) => {
                      console.log('Selected Date:', date);
-                     setSelectedDate(date);
+                     setSelectedDate(date ? date.toDate() : new Date());
                   }}
                />
             </div>
-            <br></br>
+            <br />
 
             <p className={styles.name}>Hi, Pamuditha</p>
-            <br></br>
+            <br />
             <p className={styles.feeling}>How are you feeling today?</p>
 
             <EmojiTray emojis={faceEmojis} onSelect={handleEmojiSelection} />
-            <br></br>
-            <br></br>
+
+            <br />
+            <br />
 
             <Diary />
          </div>
