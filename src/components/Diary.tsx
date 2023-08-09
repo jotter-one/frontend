@@ -2,7 +2,6 @@ import { useState } from 'react';
 import styles from '../styles/Diary.module.css';
 function NotebookPaperTextarea() {
    const [value, setValue] = useState('');
-
    function handleChange(event: React.ChangeEvent<HTMLTextAreaElement>) {
       setValue(event.target.value);
       event.target.style.height = 'auto';
