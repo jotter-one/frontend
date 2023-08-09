@@ -5,7 +5,7 @@ import EmojiPopupComponent from '@/components/EmojiPopup';
 import EmojiTray from '@/components/EmojiTray';
 import faceEmojis from '../util/emojis';
 import type { DatePickerProps } from 'antd';
-import { DatePicker, Space } from 'antd';
+import { DatePicker, Space, Tag } from 'antd';
 import { useState } from 'react';
 
 export default function Home() {
@@ -43,7 +43,9 @@ export default function Home() {
          </Head>
          <div>
             <div className={styles.dateContainer}>
-               <p className={styles.date}>{renderDateLabel()}</p>
+               <Tag color='gold' style={{ padding: '0 10px 0 10px' }}>
+                  <p className={styles.date}>{renderDateLabel()}</p>
+               </Tag>
 
                <DatePicker
                   className={styles.datePicker}
