@@ -1,0 +1,52 @@
+.navBar{
+    background-color: var(--darkbluegray);
+    height: 6vh;
+    display: flex;
+    align-items: center;
+    padding: 0 2vw;
+    color: var(--primary);
+    font-size: var(--small);
+}
+
+.hamburgerMenu{
+    display: none;
+}
+
+.logo{
+    height: 4.5vh;
+    width: 4.5vh;
+}
+
+.navLinks{
+    margin: 2vw;
+}
+
+.navLink{
+    margin: 1vw;
+}
+
+.profilePic{
+    width: 5vh;
+    height: 5vh;
+    background-size: cover;
+    position: absolute;
+    right: 2vw;
+    border-radius: 100%;
+    background-repeat: no-repeat;
+    border: 1px solid var(--primary);
+}
+
+@media screen and (max-width: 768px){
+    .navBar{
+        height: 6vh;
+    }
+
+    .navLinks{
+        display: none;
+    }
+
+    .hamburgerMenu{
+        display:flex;
+        margin: 2vw;
+    }
+}
