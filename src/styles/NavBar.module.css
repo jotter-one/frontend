@@ -6,6 +6,12 @@
     padding: 0 2vw;
     color: var(--primary);
     font-size: var(--small);
+    transition: all 0.3s ease;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    z-index: 10;
 }
 
 .hamburgerMenu{
@@ -34,13 +40,10 @@
     border-radius: 100%;
     background-repeat: no-repeat;
     border: 1px solid var(--primary);
+    transition: all 0.5s ease;
 }
 
 @media screen and (max-width: 768px){
-    .navBar{
-        height: 6vh;
-    }
-
     .navLinks{
         display: none;
     }
@@ -48,5 +51,41 @@
     .hamburgerMenu{
         display:flex;
         margin: 2vw;
+    }
+
+
+    .navBarClicked{
+        height:100vh;
+        width: 100vw;
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        z-index: 10;
+        top: 0;
+    }
+
+    .profilePicClicked{
+        position: static;
+        width: 10vh;
+        height: 10vh;
+        margin: 25vh 0 0;
+    }
+
+    .navLinksClicked{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-size: var(--medium);
+        margin: 5vh 0 0;
+    }
+
+    .navLinkClicked{
+        margin: 2vh 0;
+    }
+
+    .logoClicked{
+        height: 8vh;
+        width: 8vh;
+        margin: 2vh 0 0;
     }
 }
