@@ -63,6 +63,9 @@ const Navbar = () => {
                      className={`${navbarStyles.navLink} ${
                         isClicked ? navbarStyles.navLinkClicked : navbarStyles.navLinkNotClicked
                      }`}
+                     onClick={() => {
+                        setIsClicked(false);
+                     }}
                   >
                      {link.name}
                   </Link>

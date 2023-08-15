@@ -3,16 +3,10 @@ import Diary from '../components/Diary';
 import Head from 'next/head';
 import styles from '../styles/Home.module.css';
 import EmojiTray from '@/components/EmojiTray';
-import faceEmojis from '../util/emojis';
 import { DatePicker, Tag } from 'antd';
 
 export default function Home() {
    const [selectedDate, setSelectedDate] = useState<Date>(new Date());
-
-   const handleEmojiSelection = (selectedEmoji: string) => {
-      console.log('Selected Emoji:', selectedEmoji);
-      // Do something with the selected emoji (e.g., store in state)
-   };
 
    const renderDateLabel = () => {
       const today = new Date();
@@ -55,11 +49,7 @@ export default function Home() {
             </div>
             <br />
 
-            <p className={styles.name}>Hi, Pamuditha</p>
-            <br />
-            <p className={styles.feeling}>How are you feeling today?</p>
-
-            <EmojiTray emojis={faceEmojis} onSelect={handleEmojiSelection} />
+            <EmojiTray />
 
             <br />
             <br />

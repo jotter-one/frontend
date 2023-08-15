@@ -1,27 +1,19 @@
 .emojiTray {
    display: flex;
-   flex-wrap: wrap;
-   gap: 1%;
-   padding: 7px;
+   align-items: center;
+   margin: 1vh 10px;
+   height: 75px;
 }
 
-.emoji {
-   font-size: 24px;
-   padding: 1px;
-   cursor: pointer;
-   transition:
-      background-color 0.2s,
-      transform 0.2s;
-   background-color: transparent;
-   border: none;
-   outline: none;
+.greeting {
+   color: var(--slateblue);
+   font-weight: 600;
+   font-size: var(--large);
+   margin: 1vh 10px;
 }
 
-.selected {
-   background-color: var(--blue-200, #475569);
-   border-radius: 8px;
-}
-
-.selected:hover {
-   transform: scale(1.1);
+.question {
+   font-weight: 600;
+   font-size: var(--medium);
+   margin: 1vh 10px;
 }

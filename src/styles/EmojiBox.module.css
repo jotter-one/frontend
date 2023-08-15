@@ -1,0 +1,63 @@
+.emojiBoxNotSelected {
+   background-color: var(--paleblue);
+}
+
+.emojiBox {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   width: 55px;
+   height: 55px;
+   border-radius: 20%;
+   background-color: var(--paleblue);
+   margin: 0.8vh 8px 0.8vh 0;
+   text-align: center;
+   transition:
+      background-color 0.3s ease-in-out,
+      width 0.3s ease-in-out,
+      height 0.3s ease-in-out;
+   cursor: pointer;
+}
+
+.emojiBoxSelected {
+   width: 65px;
+   height: 65px;
+   background-color: var(--steelblue);
+   color: var(--secondary);
+}
+
+.emoji {
+   font-size: var(--large);
+   transition: font-size 0.3s ease-in;
+}
+
+.text {
+   font-size: var(--tiny);
+}
+
+.emojiSelected {
+   font-size: var(--xl);
+}
+
+@media (width <= 768px) {
+   .emojiBox {
+      width: 50px;
+      height: 50px;
+   }
+
+   .emojiBoxSelected {
+      width: 58px;
+      height: 58px;
+      background-color: var(--steelblue);
+      color: var(--secondary);
+   }
+
+   .emoji {
+      font-size: var(--mediumlarge);
+   }
+
+   .emojiSelected {
+      font-size: var(--large);
+   }
+}

@@ -1,46 +1,70 @@
-import React, { useState } from 'react';
-import styles from '../styles/EmojiTray.module.css';
+import React, { useEffect, useState } from 'react';
+import emojiPickerStyles from '../styles/EmojiTray.module.css';
+import EmojiBox from './EmojiBox';
+import { Auth } from 'aws-amplify';
 
-interface Emoji {
-   key: string;
-   emoji: string;
-   name: string;
-}
+const EmojiPicker = () => {
+   const [selectedEmoji, setSelectedEmoji] = useState('');
+   const [username, setUsername] = useState('');
 
-interface EmojiTrayProps {
-   emojis: Emoji[];
-   onSelect: (emoji: string) => void;
-}
+   useEffect(() => {
+      const fetchUserData = async () => {
+         try {
+            const user = await Auth.currentAuthenticatedUser();
+            setUsername(user.signInUserSession.idToken.payload.name.split(' ')[0]);
+            console.log(user);
+         } catch (error) {
+            console.error('Error fetching user data:', error);
+         }
+      };
+      fetchUserData();
+   }, []);
 
-const EmojiTray: React.FC<EmojiTrayProps> = ({ emojis, onSelect }) => {
-   const [selectedEmojis, setSelectedEmojis] = useState<string[]>([]);
-
-   const handleEmojiClick = (emoji: string) => {
-      if (selectedEmojis.includes(emoji)) {
-         setSelectedEmojis(selectedEmojis.filter((e) => e !== emoji));
-      } else {
-         setSelectedEmojis([...selectedEmojis, emoji]);
-      }
-   };
+   const emojiTrayBoxes = [
+      {
+         key: 0,
+         emoji: '😁',
+         text: 'Happy',
+      },
+      {
+         key: 1,
+         emoji: '😌',
+         text: 'Relaxed',
+      },
+      {
+         key: 2,
+         emoji: '😐',
+         text: 'Neutral',
+      },
+      {
+         key: 3,
+         emoji: '😕',
+         text: 'Sad',
+      },
+      {
+         key: 4,
+         emoji: '😠',
+         text: 'Angry',
+      },
+   ];
 
    return (
-      <div className={styles.emojiTray}>
-         {emojis.map(({ key, emoji, name }) => (
-            <button
-               key={key}
-               className={`${styles.emoji} ${selectedEmojis.includes(emoji) ? styles.selected : ''}`}
-               onClick={() => {
-                  handleEmojiClick(emoji);
-                  onSelect(emoji);
-               }}
-            >
-               <span role='img' aria-label={name}>
-                  {emoji}
-               </span>
-            </button>
-         ))}
+      <div>
+         <div className={emojiPickerStyles.greeting}>Hi, {username}</div>
+         <div className={emojiPickerStyles.question}>How are you feeling today?</div>
+         <div className={emojiPickerStyles.emojiTray}>
+            {emojiTrayBoxes.map((emojiTrayBox) => (
+               <EmojiBox
+                  emoji={emojiTrayBox.emoji}
+                  text={emojiTrayBox.text}
+                  key={emojiTrayBox.key}
+                  selectedEmoji={selectedEmoji}
+                  setSelectedEmoji={setSelectedEmoji}
+               />
+            ))}
+         </div>
       </div>
    );
 };
 
-export default EmojiTray;
+export default EmojiPicker;
