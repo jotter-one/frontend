@@ -5,7 +5,7 @@ import HamburgerMenu from './HamburgerMenu';
 import { useState } from 'react';
 import Avatar from './Avatar';
 import { Auth } from 'aws-amplify';
-import navbarStyles from '../styles/Navbar.module.css';
+import navbarStyles from '../styles/NavBar.module.css';
 
 const navigation = [
    { name: 'Home', href: '/' },
