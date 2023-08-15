@@ -1,0 +1,50 @@
+.avatar{
+    /* background-color: red; */
+    border-radius: 100%;
+    width: 5vh;
+    height: 5vh;
+    position: absolute;
+    right: 2vw; 
+    transition: all 0.5s ease;
+    cursor: pointer;
+}
+
+.avatarImg{
+    position: relative;
+    width: 5vh;
+    height: 5vh;
+    border-radius: 100%;
+    background-size: cover;
+    border: 1px solid var(--primary);
+    transition: all 0.5s ease-out;
+}
+
+.optionsBox{
+    width: 150px;
+    background-color: var(--darkbluegray);
+    position: absolute;
+    right: 0;
+    top: 5.7vh;
+    border-radius: 20px;
+    padding: 1vh;
+    text-align: center;
+    font-size: var(--small);
+    transition: all 0.5s ease;
+}
+
+.option{
+    padding: 0.5vh;
+    cursor: pointer;
+}
+
+.avatarNotclickedOptionsBox{
+    display: none;
+}
+
+.avatarNotclickedOption{
+    display: none;
+}
+
+.avatarClickedOptionsBox{
+    display: block;
+}
