@@ -17,7 +17,7 @@
    border-radius: 16px;
 }
 
-@media (max-width: 480px) {
+@media (width <= 480px) {
    .emoji {
       font-size: 42px;
       border-radius: 2px;
@@ -26,14 +26,14 @@
    }
 }
 
-@media (min-width: 481px) and (max-width: 640px) {
+@media (481px <= width <= 640px) {
    .emoji {
       font-size: 46px;
       border-radius: 10px;
    }
 }
 
-@media (min-width: 641px) and (max-width: 768px) {
+@media (641px <= width <= 768px) {
    .emoji {
       font-size: 55px;
       border-radius: 12px;
@@ -42,7 +42,7 @@
    }
 }
 
-@media (min-width: 769px) and (max-width: 1024px) {
+@media (769px <= width <= 1024px) {
    .emoji {
       font-size: 55px;
       border-radius: 14px;
@@ -51,21 +51,21 @@
    }
 }
 
-@media (min-width: 1025px) and (max-width: 1280px) {
+@media (1025px <= width <= 1280px) {
    .emoji {
       font-size: 55px;
       border-radius: 16px;
    }
 }
 
-@media (min-width: 1281px) and (max-width: 1536px) {
+@media (1281px <= width <= 1536px) {
    .emoji {
       font-size: 55px;
       border-radius: 16px;
    }
 }
 
-@media (min-width: 1537px) {
+@media (1537px <= width) {
    .emoji {
       font-size: 55px;
       border-radius: 18px;

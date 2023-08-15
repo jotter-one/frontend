@@ -1,0 +1,102 @@
+.navBar {
+   background-color: var(--darkbluegray);
+   height: 6vh;
+   display: flex;
+   align-items: center;
+   padding: 0 2vw;
+   color: var(--primary);
+   font-size: var(--small);
+   transition: height 0.3s ease;
+   position: absolute;
+   left: 0;
+   top: 0;
+   width: 100vw;
+   z-index: 10;
+}
+
+.hamburgerMenu {
+   display: none;
+   cursor: pointer;
+}
+
+.logo {
+   height: 4.5vh;
+   width: 4.5vh;
+   transition: all 0.5s ease;
+}
+
+.navLinks {
+   margin: 2vw;
+   display: flex;
+}
+
+.navLink {
+   margin: 1vw;
+}
+
+.navLinkLogOut {
+   display: none;
+   margin: 1vw;
+   cursor: pointer;
+}
+
+@media screen and (width <= 768px) {
+   .navLinks {
+      display: none;
+   }
+
+   .hamburgerMenu {
+      display: flex;
+      margin: 2vw;
+   }
+
+   .navBarClicked {
+      height: 100vh;
+      width: 100vw;
+      display: flex;
+      flex-direction: column;
+      position: absolute;
+      z-index: 10;
+      top: 0;
+   }
+
+   .avatarClicked {
+      position: static !important;
+      width: 10vh !important;
+      height: 10vh !important;
+   }
+
+   .avatarImgClicked {
+      position: static !important;
+      width: 10vh !important;
+      height: 10vh !important;
+      margin: 10vh 0 0 !important;
+   }
+
+   .navLinksClicked {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      font-size: var(--medium);
+      margin: 5vh 0 0;
+   }
+
+   .navLinkClicked {
+      margin: 2vh 0;
+   }
+
+   .logoClicked {
+      height: 15vh;
+      width: 15vh;
+      margin: 2vh 0 0;
+   }
+
+   .navLinkLogOutClicked {
+      display: block;
+   }
+
+   .optionsBoxClicked {
+      display: none !important;
+   }
+}
+
