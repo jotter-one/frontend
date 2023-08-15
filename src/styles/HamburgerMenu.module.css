@@ -1,28 +1,28 @@
-.hamburgerMenu_line{
-    width: 5vw;
-    height: 0.3vh;
-    margin: 0.35vh 0;
-    background-color: #fff;
-    transition: all 0.4s ease-in-out;
+.hamburgerMenu_line {
+   width: 5vw;
+   height: 0.3vh;
+   margin: 0.35vh 0;
+   background-color: #fff;
+   transition: all 0.4s ease-in-out;
 }
 
-.hamburgerMenu{
-    /* background-color: red; */
-    height: 5vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+.hamburgerMenu {
+   /* background-color: red; */
+   height: 5vh;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
 }
 
-.hamburgerMenu_lineClicked:nth-child(1){
-    transform: translateY(0.5vh) rotate(45deg);
+.hamburgerMenu_lineClicked:nth-child(1) {
+   transform: translateY(0.5vh) rotate(45deg);
 }
 
-.hamburgerMenu_lineClicked:nth-child(2){
-    display: none;
+.hamburgerMenu_lineClicked:nth-child(2) {
+   display: none;
 }
 
-.hamburgerMenu_lineClicked:nth-child(3){
-    transform: translateY(-0.5vh) rotate(-45deg);
+.hamburgerMenu_lineClicked:nth-child(3) {
+   transform: translateY(-0.5vh) rotate(-45deg);
 }

@@ -1,10 +1,9 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { FcGoogle } from 'react-icons/fc';
 import { FaFacebook } from 'react-icons/fa';
 import { Auth } from 'aws-amplify';
 import { CognitoHostedUIIdentityProvider } from '@aws-amplify/auth/lib/types';
 import { ReactNode } from 'react';
-import Head from 'next/head';
 import { GetServerSideProps } from 'next';
 import { withSSRContext } from 'aws-amplify';
 import { Button } from 'antd';

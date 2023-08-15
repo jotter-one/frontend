@@ -11,14 +11,11 @@
    flex-direction: column;
    justify-content: space-between;
    position: relative;
-   background: linear-gradient(to right, #eaf4f1, rgba(74, 128, 112, 0));
+   background: linear-gradient(to right, #eaf4f1, #4a807000);
    padding: 40px;
    height: 100%;
 }
 
-.rightContainer {
-   height: 100%;
-}
 .logoContainer {
    display: flex;
    gap: 0.5rem;
@@ -62,13 +59,14 @@
    letter-spacing: -1.5px;
 }
 
-@media (max-width: 380px) {
+@media (width <= 380px) {
    .emojiPopupContainer {
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
    }
+
    .mainContainer {
       grid-template-columns: 1fr;
    }
@@ -76,8 +74,9 @@
    .rightContainer {
       justify-content: flex-start;
    }
+
    .leftContainer {
-      background: linear-gradient(to bottom, #eaf4f1, rgba(74, 128, 112, 0));
+      background: linear-gradient(to bottom, #eaf4f1, #4a807000);
       padding: 20px;
    }
 
@@ -86,13 +85,14 @@
    }
 }
 
-@media (min-width: 381px) and (max-width: 480px) {
+@media (381px <= width <= 480px) {
    .emojiPopupContainer {
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
    }
+
    .mainContainer {
       grid-template-columns: 1fr;
    }
@@ -100,8 +100,9 @@
    .rightContainer {
       justify-content: flex-start;
    }
+
    .leftContainer {
-      background: linear-gradient(to bottom, #eaf4f1, rgba(74, 128, 112, 0));
+      background: linear-gradient(to bottom, #eaf4f1, #4a807000);
       padding: 20px;
    }
 
@@ -110,13 +111,14 @@
    }
 }
 
-@media (min-width: 481px) and (max-width: 639px) {
+@media (481px <= width <= 639px) {
    .emojiPopupContainer {
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
    }
+
    .mainContainer {
       grid-template-columns: 1fr;
    }
@@ -124,8 +126,9 @@
    .rightContainer {
       justify-content: flex-start;
    }
+
    .leftContainer {
-      background: linear-gradient(to bottom, #eaf4f1, rgba(74, 128, 112, 0));
+      background: linear-gradient(to bottom, #eaf4f1, #4a807000);
       padding: 20px;
    }
 
@@ -133,13 +136,14 @@
       font-size: 36px;
    }
 }
-@media (min-width: 640px) and (max-width: 767px) {
+
+@media (640px <= width <= 767px) {
    .mainContainer {
       grid-template-columns: 1fr;
    }
 
    .leftContainer {
-      background: linear-gradient(to bottom, #eaf4f1, rgba(74, 128, 112, 0));
+      background: linear-gradient(to bottom, #eaf4f1, #4a807000);
       padding: 40px;
    }
 
@@ -148,13 +152,13 @@
    }
 }
 
-@media (min-width: 768px) and (max-width: 1023px) {
+@media (768px <= width <= 1023px) {
    .mainContainer {
       grid-template-columns: 1fr;
    }
 
    .leftContainer {
-      background: linear-gradient(to bottom, #eaf4f1, rgba(74, 128, 112, 0));
+      background: linear-gradient(to bottom, #eaf4f1, #4a807000);
       padding: 40px;
    }
 
@@ -163,7 +167,7 @@
    }
 }
 
-@media (min-width: 1024px) and (max-width: 1279px) {
+@media (1024px <= width <= 1279px) {
    .mainContainer {
       grid-template-columns: 5fr 4fr;
    }
@@ -177,7 +181,7 @@
    }
 }
 
-@media (min-width: 1280px) and (max-width: 1535px) {
+@media (1280px <= width <= 1535px) {
    .mainContainer {
       grid-template-columns: 5fr 4fr;
    }
@@ -187,7 +191,7 @@
    }
 }
 
-@media (min-width: 1536px) {
+@media (1536px <= width) {
    .mainContainer {
       grid-template-columns: 5fr 4fr;
    }
