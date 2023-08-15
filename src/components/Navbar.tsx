@@ -1,12 +1,11 @@
-/* eslint-disable @next/next/no-img-element */
 import Image from 'next/image';
-import navbarStyles from '../styles/Navbar.module.css';
 import logo from '../../public/logo.png';
 import Link from 'next/link';
 import HamburgerMenu from './HamburgerMenu';
 import { useState } from 'react';
 import Avatar from './Avatar';
 import { Auth } from 'aws-amplify';
+import navbarStyles from '../styles/Navbar.module.css';
 
 const navigation = [
    { name: 'Home', href: '/' },
